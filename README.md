@@ -1,3 +1,25 @@
+graphB+ v0.2
+============
+
+graphB+ is a balancing algorithm for signed social network graphs. It operates on graphs stored in CSV format. A sample input graph can be found [here](graph.csv).
+
+The inputs are simple text files consisting of a header line followed by an arbitrary number of lines, each specifying one edge of the graph, where the edge weight is the sign (either 1 or -1):
+
+```From Node ID, To Node ID, Edge Weight   10,33,-1   8,5,1'''
+
+* [graphBplus\_02.cpp](graphBplus_02.cpp) is the OpenMP C++ code (with g++ intrinsics). Note that graphB+ is protected by the 3-clause BSD license included in the beginning of the code.
+
+The OpenMP C++ code can be compiled as follows:
+```g++ -O3 -march=native -fopenmp graphBplus_02.cpp -o graphBplus'''
+To run the code on the input file `graph.csv` with 100 samples and save the results of the balanced solutions in out.csv, enter:
+```./graphBplus graph.csv 100 out.csv'''
+
+To obtain the inputs used in the paper listed below and convert them to our format, download and run the file [input\_script.sh](input_script.sh). Note that this script takes about an hour to execute and requires a large amount of disk space.
+
+### Publication
+
+G. Alabandi, J. Tesic, L. Rusnak, and M. Burtscher. "Discovering and Balancing Fundamental Cycles in Large Signed Graphs." Proceedings of the 2021 ACM/IEEE International Conference for High-Performance Computing, Networking, Storage and Analysis. November 2021. This work has been supported in part by the hardware donation from NVIDIA Corporation.
+
 # status
 Status implementation in C++
 postprocessing implementation in python 
@@ -7,7 +29,7 @@ postprocessing implementation in python
 
 *Note on running any statusMain file*: Uncomment the one you wish to run (they are compiler dependent and comment out the others in your CMakeLists.txt (if using Cmake)
 
-[data-timing](https://git.txstate.edu/DataLab/data-timing)  - test folder to test output 
+[data-test](https://git.txstate.edu/DataLab/data-test)  - test folder to test output 
   * Input: 
     * Raw_Data/*_edges.csv - test input files
   * Output: Output_Data/Features - created output files 
@@ -38,3 +60,4 @@ E.g.
 
 [status55.cpp](status55.cpp) - current ECL version 55  28 Aug 2020
 
+  
