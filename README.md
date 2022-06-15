@@ -33,21 +33,14 @@ E.g.
 *  Note on running any statusMain file: Uncomment the one you wish to run (they are compiler dependent and comment out the others in your CMakeLists.txt (if using Cmake)
 
 
-#graphB+ v0.2
+# graphB+ v0.2
 
+Details 
 * graphB+ is a balancing algorithm for signed social network graphs. It operates on graphs stored in CSV format. A sample input graph can be found [here](graph.csv).
-
-* The inputs are simple text files consisting of a header line followed by an arbitrary number of lines, each specifying one edge of the graph, where the edge weight is the sign (either 1 or -1):
-
-```From Node ID, To Node ID, Edge Weight   10,33,-1   8,5,1'''
-
+* The inputs are simple text files consisting of a header line followed by an arbitrary number of lines, each specifying one edge of the graph, where the edge weight is the sign (either 1 or -1): ```From Node ID, To Node ID, Edge Weight   10,33,-1   8,5,1'''
 * [graphBplus\_02.cpp](graphBplus_02.cpp) is the OpenMP C++ code (with g++ intrinsics). Note that graphB+ is protected by the 3-clause BSD license included in the beginning of the code.
-
-* The OpenMP C++ code can be compiled as follows:
-```g++ -O3 -march=native -fopenmp graphBplus_02.cpp -o graphBplus'''
-* To run the code on the input file `graph.csv` with 100 samples and save the results of the balanced solutions in out.csv, enter:
-```./graphBplus graph.csv 100 out.csv'''
-
+* The OpenMP C++ code can be compiled as follows: ```g++ -O3 -march=native -fopenmp graphBplus_02.cpp -o graphBplus'''
+* To run the code on the input file `graph.csv` with 100 samples and save the results of the balanced solutions in out.csv, enter: ```./graphBplus graph.csv 100 out.csv'''
 * To obtain the inputs used in the paper listed below and convert them to our format, download and run the file [input\_script.sh](input_script.sh). Note that this script takes about an hour to execute and requires a large amount of disk space.
 
 ### Publication
