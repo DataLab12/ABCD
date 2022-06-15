@@ -1,12 +1,12 @@
-# status
-Status implementation in C++ TO DO: 
+# Graph Balancing Feature Extraction using C++ implementation
 
+Status implementation in C++ TO DO: 
 * add more stats, one row per node
 * consider adding ground truth column as first column
   * empty for nodes if no gt
   * original edge value for edge always 
 
-[data-test](../data-test)  - test folder to test output 
+## [data-test](../data-test)  - test folder to test output 
   * Input: 
     * Raw_Data/*_edges.csv - test input files
   * Output: Output_Data/Features - created output files 
@@ -27,7 +27,7 @@ E.g.
   
 [scripts] - py scripts for postprocessing output of statusMain.cpp 
 	
-##[55](55/) - last version we worked on
+## [55](55/) - last version we worked on
 * [statusMain.cpp](55/statusMainLinux.cpp) - main Data Lab edits for Linux here 
 * [statusMainWindows.cpp](55/statusMainWindows.cpp) - main Data Lab edits for Windows here
 *  Note on running any statusMain file: Uncomment the one you wish to run (they are compiler dependent and comment out the others in your CMakeLists.txt (if using Cmake)
