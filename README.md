@@ -1,4 +1,4 @@
-# ABCD: ALGORITHM FOR BALANCED COMPONENT DISCOVERY IN SIGNED NETWORKS
+# ABCD: Algorithm For Balanced Component Discovery in Signed Networks
 
 Authors: <em> Muhieddine Shebaro, Jelena Tešić </em>
 
