@@ -37,7 +37,7 @@ user:~$ ./a.out input.txt 1000 500
 ```
 where K < iteration_count.
  
-* ABCD prints the vertex cardinality of the largest balanced subgraph found.
+* **Output:** ABCD prints the vertex cardinality of the largest balanced subgraph found.
 
 **Note:** if you run into errors related to the stack memory please run this command before executing the code:
 ```
