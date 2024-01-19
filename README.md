@@ -1,6 +1,6 @@
-# GraphC: Parameter-Free Optimal Hierarchical Clustering of Signed Graphs
+# ABCD: ALGORITHM FOR BALANCED COMPONENT DISCOVERY IN SIGNED NETWORKS
 
-Authors: <em> Muhieddine Shebaro, Martin Burtscher, Lucas Rusnak, Jelena Tešić </em>
+Authors: <em> Muhieddine Shebaro, Jelena Tešić </em>
 
 ![Highland Tribes Execution!](/images/animate.gif "Highland Tribes Clustering")
 
