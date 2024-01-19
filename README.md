@@ -4,38 +4,42 @@ Authors: <em> Muhieddine Shebaro, Jelena Tešić </em>
 
 ![Highland Tribes Execution!](/images/updated_example1.png "Example")
 
-**graphC** (2024) is a scalable state-of-the-art hierarchical clustering algorithm for signed graphs capable of automatically detecting clusters without a predefined K hyperparameter (number of communities), no matrices, no decomposition spectral solvers, and no ground-truth labels. The algorithm is implemented in C++ and employs an efficient fundamental cycle basis discovery method to balance a connected component, performs Harary cuts, and selects the most optimal split for a connected component.
+**ABCD** (2023) is a heuristic searching algorithm in signed graphs that tackles the NP-hard problem of finding the largest balanced subgraph. It builds on the scalable discovery of fundamental cycles and utilizes the graph's node density distribution and near-optimal balanced states to minimize the number of vertices removed from the balanced sub-graph.
 
 ## Citation
-Please cite the following publication: TBD
+Please cite the following publication: Shebaro, M., & Tesic, J. (2023). ABCD: Algorithm for Balanced Component Discovery in Signed Networks. ArXiv, abs/2311.00848.
 
 **BibTeX entry:**
 ```
-TBD
+@misc{shebaro2023abcd,
+      title={ABCD: Algorithm for Balanced Component Discovery in Signed Networks}, 
+      author={Muhieddine Shebaro and Jelena Tešić},
+      year={2023},
+      eprint={2311.00848},
+      archivePrefix={arXiv},
+      primaryClass={cs.SI}
+}
 ```
 
 ## How to Run the Code 
 
-* Simply download index.cpp and GraphBplus_Harary.cpp and compile the former source file like the following:
+* Simply download ABCD.cpp compile the source file like the following:
 
 ```
-user:~$ g++ -fopenmp index.cpp
+user:~$ g++ -fopenmp ABCD.cpp
 ```
 The signed graph must be in the following format to be compatible with graphC (src,dst,sign).
-Preprocessing of the signed graph is embedded and neutral edges are treated as positive.
+Preprocessing of the signed graph is embedded.
 
-* To execute the compiled file, graphC utilizes 6 parameters in this order (iteration_count 𝛼 𝛽 ε time_limit γ):
+* To execute the compiled file, ABCD utilizes 2 parameters in this order (iteration_count K):
 ```
-user:~$ ./a.out input.txt 0.5 1 0.000001 -1 2
+user:~$ ./a.out input.txt 1000 500
 ```
-You can input -1 in time_limit to allow the algorithm to run the algorithm until it's finished. Minimum of γ is 2. Range of 𝛼 and 𝛽 is [0,1]. Range of ε is [0, infinity].
+where K < iteration_count.
  
-* graphC outputs 2 .txt files:
+* ABCD prints the vertex cardinality of the largest balanced subgraph found.
 
-1. *_labels.txt: This contains the assigned clustering labels for each node (original node ID).
-2. *_posin_negout.txt: This contains the history of change of the fraction of positive edges within communities and fraction of negative edges between communities including the overall improvement and unhappy ratio after each Harary split.
-
-**Note:** Do <em> not</em> change the name of "GraphBplus_Harary.cpp" file. And if you run into errors related to the stack memory please run this command before executing the code:
+**Note:** if you run into errors related to the stack memory please run this command before executing the code:
 ```
 user:~$ ulimit -s unlimited
 ```
