@@ -23,7 +23,7 @@ Please cite the following publication: Shebaro, M., & Tesic, J. (2023). ABCD: Al
 
 ## How to Run the Code 
 
-* Simply download ABCD.cpp compile the source file like the following:
+* Simply download ABCD.cpp (ABCDH variant), ABCD_degree (ABCDD variant), or ABCD_status (ABCDS variant) and compile the source file like the following:
 
 ```
 user:~$ g++ -fopenmp ABCD.cpp
